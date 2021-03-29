@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8D9FED2612611B001F395B /* BaseXCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D9FEC2612611B001F395B /* BaseXCTestCase.swift */; };
 		2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */; };
 		2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71AC1261243B90006F6FD /* ContentView.swift */; };
 		2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC3261243BB0006F6FD /* Assets.xcassets */; };
 		2AD71AC7261243BB0006F6FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC6261243BB0006F6FD /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2A8D9FD826125E8D001F395B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AD71AB4261243B90006F6FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AD71ABB261243B90006F6FD;
+			remoteInfo = BlaBlaMovie;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2A8D9FD326125E8D001F395B /* BlaBlaMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlaBlaMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A8D9FD726125E8D001F395B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A8D9FE226125F3B001F395B /* Development.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Development.xctestplan; sourceTree = "<group>"; };
+		2A8D9FEC2612611B001F395B /* BaseXCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXCTestCase.swift; sourceTree = "<group>"; };
 		2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlaBlaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieApp.swift; sourceTree = "<group>"; };
 		2AD71AC1261243B90006F6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +38,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2A8D9FD026125E8D001F395B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AD71AB9261243B90006F6FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,10 +55,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A8D9FCE26125D80001F395B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		2A8D9FD426125E8D001F395B /* BlaBlaMovieTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A8D9FEA2612604D001F395B /* Base */,
+				2A8D9FEB2612605E001F395B /* Cases */,
+				2A8D9FE526126000001F395B /* Configurations */,
+			);
+			path = BlaBlaMovieTests;
+			sourceTree = "<group>";
+		};
+		2A8D9FDF26125E98001F395B /* BlaBlaMovieTestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				2A8D9FE226125F3B001F395B /* Development.xctestplan */,
+			);
+			path = BlaBlaMovieTestPlans;
+			sourceTree = "<group>";
+		};
+		2A8D9FE526126000001F395B /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				2A8D9FD726125E8D001F395B /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2A8D9FEA2612604D001F395B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2A8D9FEC2612611B001F395B /* BaseXCTestCase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2A8D9FEB2612605E001F395B /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
 		2AD71AB3261243B90006F6FD = {
 			isa = PBXGroup;
 			children = (
 				2AD71ABE261243B90006F6FD /* BlaBlaMovie */,
+				2A8D9FDF26125E98001F395B /* BlaBlaMovieTestPlans */,
+				2A8D9FD426125E8D001F395B /* BlaBlaMovieTests */,
 				2AD71ABD261243B90006F6FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */,
+				2A8D9FD326125E8D001F395B /* BlaBlaMovieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +127,7 @@
 			children = (
 				2AD71ACF261243E40006F6FD /* Assets */,
 				2AD71AD4261244210006F6FD /* Configurations */,
+				2A8D9FCE26125D80001F395B /* Enum */,
 				2AD71AD8261244860006F6FD /* Main */,
 				2AD71AD7261244790006F6FD /* Views */,
 			);
@@ -96,6 +170,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2A8D9FD226125E8D001F395B /* BlaBlaMovieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A8D9FDA26125E8D001F395B /* Build configuration list for PBXNativeTarget "BlaBlaMovieTests" */;
+			buildPhases = (
+				2A8D9FCF26125E8D001F395B /* Sources */,
+				2A8D9FD026125E8D001F395B /* Frameworks */,
+				2A8D9FD126125E8D001F395B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A8D9FD926125E8D001F395B /* PBXTargetDependency */,
+			);
+			name = BlaBlaMovieTests;
+			productName = BlaBlaMovieTests;
+			productReference = 2A8D9FD326125E8D001F395B /* BlaBlaMovieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2AD71ABB261243B90006F6FD /* BlaBlaMovie */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AD71ACB261243BB0006F6FD /* Build configuration list for PBXNativeTarget "BlaBlaMovie" */;
@@ -122,6 +214,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					2A8D9FD226125E8D001F395B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2AD71ABB261243B90006F6FD;
+					};
 					2AD71ABB261243B90006F6FD = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -141,11 +237,19 @@
 			projectRoot = "";
 			targets = (
 				2AD71ABB261243B90006F6FD /* BlaBlaMovie */,
+				2A8D9FD226125E8D001F395B /* BlaBlaMovieTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2A8D9FD126125E8D001F395B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AD71ABA261243B90006F6FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2A8D9FCF26125E8D001F395B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A8D9FED2612611B001F395B /* BaseXCTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AD71AB8261243B90006F6FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,7 +281,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2A8D9FD926125E8D001F395B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AD71ABB261243B90006F6FD /* BlaBlaMovie */;
+			targetProxy = 2A8D9FD826125E8D001F395B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2A8D9FDB26125E8D001F395B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8UNJX8SHV;
+				INFOPLIST_FILE = BlaBlaMovieTests/Configurations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RolandLariotte.BlaBlaMovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlaBlaMovie.app/BlaBlaMovie";
+			};
+			name = Debug;
+		};
+		2A8D9FDC26125E8D001F395B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8UNJX8SHV;
+				INFOPLIST_FILE = BlaBlaMovieTests/Configurations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RolandLariotte.BlaBlaMovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlaBlaMovie.app/BlaBlaMovie";
+			};
+			name = Release;
+		};
 		2AD71AC9261243BB0006F6FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -333,6 +493,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A8D9FDA26125E8D001F395B /* Build configuration list for PBXNativeTarget "BlaBlaMovieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8D9FDB26125E8D001F395B /* Debug */,
+				2A8D9FDC26125E8D001F395B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AD71AB7261243B90006F6FD /* Build configuration list for PBXProject "BlaBlaMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

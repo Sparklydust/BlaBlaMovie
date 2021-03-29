@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "9D834827-C2C9-41CD-AF06-4AA20B632231",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BlaBlaMovie.xcodeproj",
+        "identifier" : "2A8D9FD226125E8D001F395B",
+        "name" : "BlaBlaMovieTests"
+      }
+    }
+  ],
+  "version" : 1
+}
