@@ -21,8 +21,8 @@ struct SearchMoviesView: View {
     ZStack {
       NavigationView {
         VStack {
-          List(viewModel.moviesData, id: \.imdbID) { movie in
-            Text(movie.title)
+          List(viewModel.moviesData, id: \.imdbID) {
+            MovieCell(movie: $0)
           }
         }
         .add(searchBarItem)

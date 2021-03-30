@@ -41,6 +41,7 @@
 		2A8DA0C726137625001F395B /* BlaBlaMovieAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0C626137625001F395B /* BlaBlaMovieAlert.swift */; };
 		2A8DA0CC261376B9001F395B /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0CB261376B9001F395B /* AlertManager.swift */; };
 		2A8DA0D426137C18001F395B /* MainProgressViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0D326137C18001F395B /* MainProgressViewModifier.swift */; };
+		2A8DA0DA26138123001F395B /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0D926138123001F395B /* MovieCell.swift */; };
 		2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */; };
 		2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71AC1261243B90006F6FD /* ContentView.swift */; };
 		2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC3261243BB0006F6FD /* Assets.xcassets */; };
@@ -96,6 +97,7 @@
 		2A8DA0C626137625001F395B /* BlaBlaMovieAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieAlert.swift; sourceTree = "<group>"; };
 		2A8DA0CB261376B9001F395B /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		2A8DA0D326137C18001F395B /* MainProgressViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProgressViewModifier.swift; sourceTree = "<group>"; };
+		2A8DA0D926138123001F395B /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlaBlaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieApp.swift; sourceTree = "<group>"; };
 		2AD71AC1261243B90006F6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		2A8DA07726134ED3001F395B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2A8DA0D926138123001F395B /* MovieCell.swift */,
 				2A8DA07826134EDF001F395B /* WelcomeCell.swift */,
 			);
 			path = Cells;
@@ -645,6 +648,7 @@
 				2A8DA01F2613248D001F395B /* NetworkError.swift in Sources */,
 				2A8DA0C726137625001F395B /* BlaBlaMovieAlert.swift in Sources */,
 				2A8DA084261357D0001F395B /* WelcomeTitle.swift in Sources */,
+				2A8DA0DA26138123001F395B /* MovieCell.swift in Sources */,
 				2A8DA0AA26136A52001F395B /* MoviesViewModel.swift in Sources */,
 				2A8DA0D426137C18001F395B /* MainProgressViewModifier.swift in Sources */,
 				2A8DA07926134EDF001F395B /* WelcomeCell.swift in Sources */,

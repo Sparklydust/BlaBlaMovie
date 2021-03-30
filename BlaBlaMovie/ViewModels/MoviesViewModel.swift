@@ -48,6 +48,7 @@ extension MoviesViewModel {
     networkingManager
       .get(MoviesSearchData.self, atURL: .searchMovies(name))
       .receive(on: DispatchQueue.main)
+      .map { $0.search.sorted { $0.title < $1.title }}
       .sink(
         receiveCompletion: { [weak self] completion in
           self?.handleNetworkRequest(completion)
@@ -61,9 +62,9 @@ extension MoviesViewModel {
   ///
   /// - Parameter data: Searched movies from the api.
   ///
-  func handleSearchMovies(_ data: MoviesSearchData) {
+  func handleSearchMovies(_ data: [SearchResultModel]) {
     moviesData.removeAll()
-    moviesData = data.search
+    moviesData.append(contentsOf: data)
   }
 
   /// Trigger failure or finished actions on network request completion.
