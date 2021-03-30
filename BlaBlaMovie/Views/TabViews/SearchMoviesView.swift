@@ -13,16 +13,22 @@ import SwiftUI
 ///
 struct SearchMoviesView: View {
 
+  @ObservedObject var viewModel = MoviesViewModel()
+
   @StateObject var searchBarItem = SearchBarItem()
 
   var body: some View {
     NavigationView {
       VStack {
-        Text("SearchMoviesView")
+        List(viewModel.moviesData, id: \.imdbID) { movie in
+          Text(movie.title)
+        }
       }
       .add(searchBarItem)
       .navigationTitle(Localized.moviesTabItem)
     }
+    .navigationViewStyle(StackNavigationViewStyle())
+    .onAppear { viewModel.getMovies("pirate") }
   }
 }
 
