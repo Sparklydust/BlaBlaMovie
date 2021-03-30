@@ -16,4 +16,8 @@ import SwiftUI
 extension Image {
 
   static let movieTicket = Image(systemName: "film")
+
+  static let star = Image(systemName: "star")
+
+  static let worldNetwork = Image(systemName: "network")
 }

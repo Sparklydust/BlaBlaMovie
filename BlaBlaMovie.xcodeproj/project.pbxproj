@@ -24,6 +24,11 @@
 		2A8DA0572613481D001F395B /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0562613481D001F395B /* Localized.swift */; };
 		2A8DA05E26134878001F395B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A8DA06026134878001F395B /* Localizable.strings */; };
 		2A8DA067261349DA001F395B /* Image+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA066261349DA001F395B /* Image+Name.swift */; };
+		2A8DA06C26134B2D001F395B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA06B26134B2D001F395B /* WelcomeView.swift */; };
+		2A8DA07426134E64001F395B /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA07326134E64001F395B /* MainButton.swift */; };
+		2A8DA07926134EDF001F395B /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA07826134EDF001F395B /* WelcomeCell.swift */; };
+		2A8DA07F2613571E001F395B /* SkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA07E2613571E001F395B /* SkipButton.swift */; };
+		2A8DA084261357D0001F395B /* WelcomeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA083261357D0001F395B /* WelcomeTitle.swift */; };
 		2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */; };
 		2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71AC1261243B90006F6FD /* ContentView.swift */; };
 		2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC3261243BB0006F6FD /* Assets.xcassets */; };
@@ -62,6 +67,11 @@
 		2A8DA05F26134878001F395B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A8DA063261349A9001F395B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A8DA066261349DA001F395B /* Image+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Name.swift"; sourceTree = "<group>"; };
+		2A8DA06B26134B2D001F395B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		2A8DA07326134E64001F395B /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		2A8DA07826134EDF001F395B /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
+		2A8DA07E2613571E001F395B /* SkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButton.swift; sourceTree = "<group>"; };
+		2A8DA083261357D0001F395B /* WelcomeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitle.swift; sourceTree = "<group>"; };
 		2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlaBlaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieApp.swift; sourceTree = "<group>"; };
 		2AD71AC1261243B90006F6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -258,6 +268,48 @@
 			path = Localizables;
 			sourceTree = "<group>";
 		};
+		2A8DA06A26134B1D001F395B /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA06B26134B2D001F395B /* WelcomeView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		2A8DA07126134E50001F395B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA07226134E58001F395B /* Buttons */,
+				2A8DA082261357B2001F395B /* Titles */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2A8DA07226134E58001F395B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA07326134E64001F395B /* MainButton.swift */,
+				2A8DA07E2613571E001F395B /* SkipButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		2A8DA07726134ED3001F395B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA07826134EDF001F395B /* WelcomeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2A8DA082261357B2001F395B /* Titles */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA083261357D0001F395B /* WelcomeTitle.swift */,
+			);
+			path = Titles;
+			sourceTree = "<group>";
+		};
 		2AD71AB3261243B90006F6FD = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +366,10 @@
 		2AD71AD7261244790006F6FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A8DA07726134ED3001F395B /* Cells */,
+				2A8DA07126134E50001F395B /* Components */,
 				2A8DA04B261343F8001F395B /* Navigations */,
+				2A8DA06A26134B1D001F395B /* Subviews */,
 				2A8DA04E26134484001F395B /* TabViews */,
 			);
 			path = Views;
@@ -447,13 +502,18 @@
 				2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */,
 				2A8DA03426132824001F395B /* MoviesSearchData.swift in Sources */,
 				2A8D9FF52612634B001F395B /* NetworkEndpoint.swift in Sources */,
+				2A8DA07F2613571E001F395B /* SkipButton.swift in Sources */,
 				2A8DA04626132AD9001F395B /* SearchResultModel.swift in Sources */,
 				2A8DA01F2613248D001F395B /* NetworkError.swift in Sources */,
+				2A8DA084261357D0001F395B /* WelcomeTitle.swift in Sources */,
+				2A8DA07926134EDF001F395B /* WelcomeCell.swift in Sources */,
 				2A8DA01B261323C1001F395B /* NetworkingManager.swift in Sources */,
 				2A8DA0502613449D001F395B /* SearchMoviesView.swift in Sources */,
 				2A8DA00626126824001F395B /* BundleManager.swift in Sources */,
 				2A8DA04226132A84001F395B /* MotionPictureType.swift in Sources */,
 				2A8DA03C2613293B001F395B /* Published+Codable.swift in Sources */,
+				2A8DA06C26134B2D001F395B /* WelcomeView.swift in Sources */,
+				2A8DA07426134E64001F395B /* MainButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,11 @@ import SwiftUI
 ///
 struct ContentView: View {
 
+  @AppStorage("showWelcomeView")
+  var showWelcomeViewStorage = true
+
+  @State var showWelcomeView = false
+
   var body: some View {
     TabView {
       SearchMoviesView()
@@ -19,6 +24,12 @@ struct ContentView: View {
           Text(Localized.moviesTabItem)
           Image.movieTicket
         }
+    }
+    .sheet(isPresented: $showWelcomeView) {
+      WelcomeView()
+    }
+    .onAppear {
+      showWelcomeView = showWelcomeViewStorage
     }
   }
 }

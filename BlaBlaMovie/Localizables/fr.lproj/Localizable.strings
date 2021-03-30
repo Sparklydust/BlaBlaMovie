@@ -7,6 +7,24 @@
  French Translation
 */
 
+// MARK: - Buttons
+//
+"skipNextTimeButton" = "Ne plus voir";
+"startButton" = "Commencer";
+
+// MARK: - Labels
+//
+"chooseMoviesRuleLabel" = "Vous pouvez choisir jusqu'à 3 films.";
+"giveTheWordLabel" = "BlablaMovie vous donne la parole en choisissant vos films préférés.";
+"winningInfoLabel" = "Le film gagnant sera révélé chaque semaine.";
+
 // MARK: - Tab Items
 //
 "moviesTabItem" = "Films";
+
+// MARK: - Titles
+//
+"chooseMoviesRuleTitle" = "Choisis tes films";
+"giveTheWordTitle" = "Dit le au monde";
+"welcomeTitle" = "Bienvenue sur BlaBlaMovie";
+"winningInfoLabel" = "Seulement un gagnant";

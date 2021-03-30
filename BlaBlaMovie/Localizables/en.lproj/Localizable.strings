@@ -7,6 +7,24 @@
  English Translation
 */
 
+// MARK: - Buttons
+//
+"skipNextTimeButton" = "Skip next time";
+"startButton" = "Start";
+
+// MARK: - Labels
+//
+"chooseMoviesRuleLabel" = "You can choose up to 3 movies";
+"giveTheWordLabel" = "BlaBlaMovie give you the word by choosing your favourites movies.";
+"winningInfoLabel" = "The winning movie will be revealed to the world each week.";
+
 // MARK: - Tab Items
 //
 "moviesTabItem" = "Movies";
+
+// MARK: - Titles
+//
+"chooseMoviesRuleTitle" = "Choose your movies";
+"giveTheWordTitle" = "Tell the world";
+"welcomeTitle" = "Welcome To BlaBlaMovie";
+"winningInfoTitle" = "Only one winner";
