@@ -25,13 +25,13 @@ enum NetworkEndpoint {
 
   // MARK: Resources
   //
-  case movie(String)
+  case searchMovies(String)
 
   /// BlaBlaMovie api endpoint.
   ///
   var url: URL {
     switch self {
-    case .movie(let name):
+    case .searchMovies(let name):
       return NetworkEndpoint.baseURL.appendingPathComponent("s=\(name)")
     }
   }
