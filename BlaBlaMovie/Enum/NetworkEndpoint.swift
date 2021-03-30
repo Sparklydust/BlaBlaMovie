@@ -11,7 +11,7 @@ import Foundation
 /// URL path definition that send requests to the BlaBlaMovie server side.
 ///
 /// ```
-/// NetworkEndpoint.movie([MOVIE_NAME]).url  // example of use
+/// NetworkEndpoint.searchMovies(MOVIE_NAME).url  // example of use
 /// ```
 ///
 enum NetworkEndpoint {

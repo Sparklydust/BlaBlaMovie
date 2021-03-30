@@ -1,0 +1,12 @@
+/* 
+ Localizable.strings
+ BlaBlaMovie
+
+ Created by Roland Lariotte on 30/03/2021.
+
+ French Translation
+*/
+
+// MARK: - Tab Items
+//
+"moviesTabItem" = "Films";
