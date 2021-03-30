@@ -21,7 +21,7 @@ enum NetworkEndpoint {
 
   /// Base api url
   ///
-  static let baseURL = URL(string: "http://www.omdbapi.com/?apikey=\(apiKey)&")!
+  static let baseURL = URL(string: "http://www.omdbapi.com/?apikey=\(apiKey)&")
 
   // MARK: Resources
   //
@@ -32,7 +32,9 @@ enum NetworkEndpoint {
   var url: URL {
     switch self {
     case .searchMovies(let name):
-      return NetworkEndpoint.baseURL.appendingPathComponent("s=\(name)")
+      return NetworkEndpoint
+        .baseURL
+        .flatMap { URL(string: $0.absoluteString + "s=\(name)") }!
     }
   }
 }

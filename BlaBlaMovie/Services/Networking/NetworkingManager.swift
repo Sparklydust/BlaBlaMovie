@@ -23,7 +23,7 @@ final class NetworkingManager {
 
 // MARK: - Get
 extension NetworkingManager {
-  /// Get request that fetch array of any type of data defined in the parameter data.
+  /// Get request that fetch any type of data defined in the parameter data.
   ///
   /// - Parameters:
   ///   - data: Any type of data needed from the api that is codable.
@@ -31,12 +31,13 @@ extension NetworkingManager {
   /// - Returns: The corresponding data type fetched from the api endpoint
   /// or an error if any.
   ///
-  func getArray<T: Codable>(of data: T.Type,
-                            atURL networkEndpoint: NetworkEndpoint) -> AnyPublisher<[T], Error> {
+  func get<T: Codable>(_ data: T.Type,
+                       atURL networkEndpoint: NetworkEndpoint) -> AnyPublisher<T, Error> {
+
     urlSession
       .dataTaskPublisher(for: networkEndpoint.url)
       .tryMap { try self.validate($0.data, $0.response) }
-      .decode(type: [T].self, decoder: JSONDecoder())
+      .decode(type: T.self, decoder: JSONDecoder())
       .eraseToAnyPublisher()
   }
 }
