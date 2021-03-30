@@ -44,6 +44,11 @@
 		2A8DA0DA26138123001F395B /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0D926138123001F395B /* MovieCell.swift */; };
 		2A8DA0E42613B064001F395B /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0E32613B064001F395B /* WebImageView.swift */; };
 		2A8DA0EA2613B0CE001F395B /* WebImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0E92613B0CE001F395B /* WebImageViewModel.swift */; };
+		2A8DA0EF2613B631001F395B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0EE2613B631001F395B /* ImageCacheManager.swift */; };
+		2A8DA0F52613B665001F395B /* ImageCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0F42613B665001F395B /* ImageCacheProtocol.swift */; };
+		2A8DA0F92613B6BB001F395B /* CacheConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0F82613B6BB001F395B /* CacheConfiguration.swift */; };
+		2A8DA0FF2613B773001F395B /* NSLockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0FE2613B773001F395B /* NSLockProtocol.swift */; };
+		2A8DA1032613B7AD001F395B /* UIImage+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA1022613B7AD001F395B /* UIImage+Decode.swift */; };
 		2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */; };
 		2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71AC1261243B90006F6FD /* ContentView.swift */; };
 		2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC3261243BB0006F6FD /* Assets.xcassets */; };
@@ -102,6 +107,11 @@
 		2A8DA0D926138123001F395B /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		2A8DA0E32613B064001F395B /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		2A8DA0E92613B0CE001F395B /* WebImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageViewModel.swift; sourceTree = "<group>"; };
+		2A8DA0EE2613B631001F395B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		2A8DA0F42613B665001F395B /* ImageCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheProtocol.swift; sourceTree = "<group>"; };
+		2A8DA0F82613B6BB001F395B /* CacheConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConfiguration.swift; sourceTree = "<group>"; };
+		2A8DA0FE2613B773001F395B /* NSLockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLockProtocol.swift; sourceTree = "<group>"; };
+		2A8DA1022613B7AD001F395B /* UIImage+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decode.swift"; sourceTree = "<group>"; };
 		2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlaBlaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieApp.swift; sourceTree = "<group>"; };
 		2AD71AC1261243B90006F6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -198,6 +208,7 @@
 			children = (
 				2A8DA0CA261376AA001F395B /* Alert */,
 				2A8DA0042612680B001F395B /* BundleManager */,
+				2A8DA0ED2613B610001F395B /* Cache */,
 				2A8DA019261323AA001F395B /* Networking */,
 			);
 			path = Services;
@@ -273,6 +284,7 @@
 			children = (
 				2A8DA066261349DA001F395B /* Image+Name.swift */,
 				2A8DA03B2613293B001F395B /* Published+Codable.swift */,
+				2A8DA1022613B7AD001F395B /* UIImage+Decode.swift */,
 				2A8DA0A2261364C2001F395B /* View+SearchBar.swift */,
 			);
 			path = Extensions;
@@ -418,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				2A8DA0C2261375EB001F395B /* AlertProtocol.swift */,
+				2A8DA0F42613B665001F395B /* ImageCacheProtocol.swift */,
+				2A8DA0FE2613B773001F395B /* NSLockProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -460,6 +474,14 @@
 				2A8DA0E32613B064001F395B /* WebImageView.swift */,
 			);
 			path = WebImage;
+			sourceTree = "<group>";
+		};
+		2A8DA0ED2613B610001F395B /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA0EE2613B631001F395B /* ImageCacheManager.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		2AD71AB3261243B90006F6FD = {
@@ -511,6 +533,7 @@
 		2AD71AD4261244210006F6FD /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				2A8DA0F82613B6BB001F395B /* CacheConfiguration.swift */,
 				2AD71AC8261243BB0006F6FD /* Info.plist */,
 				2A8DA015261278BF001F395B /* Keys.plist */,
 			);
@@ -660,6 +683,7 @@
 				2A8DA067261349DA001F395B /* Image+Name.swift in Sources */,
 				2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */,
 				2A8DA0572613481D001F395B /* Localized.swift in Sources */,
+				2A8DA0EF2613B631001F395B /* ImageCacheManager.swift in Sources */,
 				2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */,
 				2A8DA0A3261364C2001F395B /* View+SearchBar.swift in Sources */,
 				2A8DA0952613638E001F395B /* SearchBarModifier.swift in Sources */,
@@ -668,8 +692,10 @@
 				2A8DA07F2613571E001F395B /* SkipButton.swift in Sources */,
 				2A8DA04626132AD9001F395B /* SearchResultData.swift in Sources */,
 				2A8DA01F2613248D001F395B /* NetworkError.swift in Sources */,
+				2A8DA1032613B7AD001F395B /* UIImage+Decode.swift in Sources */,
 				2A8DA0E42613B064001F395B /* WebImageView.swift in Sources */,
 				2A8DA0C726137625001F395B /* BlaBlaMovieAlert.swift in Sources */,
+				2A8DA0FF2613B773001F395B /* NSLockProtocol.swift in Sources */,
 				2A8DA084261357D0001F395B /* WelcomeTitle.swift in Sources */,
 				2A8DA0DA26138123001F395B /* MovieCell.swift in Sources */,
 				2A8DA0AA26136A52001F395B /* MoviesViewModel.swift in Sources */,
@@ -680,9 +706,11 @@
 				2A8DA0CC261376B9001F395B /* AlertManager.swift in Sources */,
 				2A8DA00626126824001F395B /* BundleManager.swift in Sources */,
 				2A8DA04226132A84001F395B /* MotionPictureType.swift in Sources */,
+				2A8DA0F92613B6BB001F395B /* CacheConfiguration.swift in Sources */,
 				2A8DA08D261361BF001F395B /* SearchBarRepresentable.swift in Sources */,
 				2A8DA0EA2613B0CE001F395B /* WebImageViewModel.swift in Sources */,
 				2A8DA03C2613293B001F395B /* Published+Codable.swift in Sources */,
+				2A8DA0F52613B665001F395B /* ImageCacheProtocol.swift in Sources */,
 				2A8DA06C26134B2D001F395B /* WelcomeView.swift in Sources */,
 				2A8DA07426134E64001F395B /* MainButton.swift in Sources */,
 				2A8DA09D2613640E001F395B /* SearchBarItem.swift in Sources */,
