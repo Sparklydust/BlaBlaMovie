@@ -18,9 +18,16 @@ final class MoviesViewModel: ObservableObject {
 
   // MARK: Services
   //
+  var alertManager: AlertProtocol
   var networkingManager: NetworkingManager
 
-  init(networkingManager: NetworkingManager = NetworkingManager()) {
+  // MARK: UILevers
+  //
+  @Published var showAlert = false
+
+  init(alertManager: AlertProtocol = AlertManager(),
+       networkingManager: NetworkingManager = NetworkingManager()) {
+    self.alertManager = alertManager
     self.networkingManager = networkingManager
   }
 }
@@ -39,7 +46,8 @@ extension MoviesViewModel {
       .get(MoviesSearchData.self, atURL: .searchMovies(name))
       .receive(on: DispatchQueue.main)
       .sink(
-        receiveCompletion: { completion in
+        receiveCompletion: { [weak self] completion in
+          self?.handleNetworkRequest(completion)
           completionHandler() },
         receiveValue: { [weak self] data in
           self?.handleSearchMovies(data) })
@@ -53,5 +61,52 @@ extension MoviesViewModel {
   func handleSearchMovies(_ data: MoviesSearchData) {
     moviesData.removeAll()
     moviesData = data.search
+  }
+
+  /// Trigger failure or finished actions on network request completion.
+  ///
+  /// - Parameter completion: Network Request completion with error if any.
+  ///
+  func handleNetworkRequest(_ completion: Subscribers.Completion<Error>) {
+    switch completion {
+    case .failure(let error):
+      triggerCompletion(error)
+      return
+    case .finished:
+      return
+    }
+  }
+
+  /// Switch the NetworkError from api call to trigger
+  /// specific Alert.
+  ///
+  /// - Parameter error: NetworkError from api.
+  ///
+  func triggerCompletion(_ error: Error) {
+    switch error {
+    case NetworkError.internalServerError:
+      triggerAlert(.internalServerError)
+      return
+    case NetworkError.invalidResponse:
+      triggerAlert(.invalidResponse)
+      return
+    case NetworkError.notFound:
+      triggerAlert(.notFound)
+      return
+    case NetworkError.unauthorized:
+      triggerAlert(.unauthorized)
+      return
+    default:
+      triggerAlert(.unknown)
+      return
+    }
+  }
+
+  /// Trigger alert from AlertManager service.
+  ///
+  /// - Parameter alert: Custom alert
+  ///
+  func triggerAlert(_ alert: BlaBlaMovieAlert) {
+    alertManager.trigger(alert, &showAlert)
   }
 }

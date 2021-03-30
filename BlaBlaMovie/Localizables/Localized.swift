@@ -13,6 +13,54 @@ import Foundation
 ///
 enum Localized {
 
+  // MARK: - Alert Message
+  //
+  static let internalServerErrorAlertMessage = NSLocalizedString(
+    "internalServerErrorAlertMessage",
+    comment: "Alert message populated to the user")
+
+  static let invalidResponseAlertMessage = NSLocalizedString(
+    "invalidResponseAlertMessage",
+    comment: "Alert message populated to the user")
+
+  static let notFoundAlertMessage = NSLocalizedString(
+    "notFoundAlertMessage",
+    comment: "Alert message populated to the user")
+
+  static let unauthorizedAlertMessage = NSLocalizedString(
+    "unauthorizedAlertMessage",
+    comment: "Alert message populated to the user")
+
+  static let UnknownAlertMessage = NSLocalizedString(
+    "UnknownAlertMessage",
+    comment: "Alert message populated to the user")
+
+  // MARK: - Alert Title
+  //
+  static let internalServerErrorAlertTitle = NSLocalizedString(
+    "internalServerErrorAlertTitle",
+    comment: "Alert title populated to the user")
+
+
+  static let invalidResponseAlertTitle = NSLocalizedString(
+    "invalidResponseAlertTitle",
+    comment: "Alert title populated to the user")
+
+
+  static let notFoundAlertTitle = NSLocalizedString(
+    "notFoundAlertTitle",
+    comment: "Alert title populated to the user")
+
+
+  static let unauthorizedAlertTitle = NSLocalizedString(
+    "unauthorizedAlertTitle",
+    comment: "Alert title populated to the user")
+
+
+  static let UnknownAlertTitle = NSLocalizedString(
+    "UnknownAlertTitle",
+    comment: "Alert title populated to the user")
+
   // MARK: - Buttons
   //
   static let skipNextTimeButton = NSLocalizedString(

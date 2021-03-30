@@ -29,6 +29,9 @@ struct SearchMoviesView: View {
     }
     .navigationViewStyle(StackNavigationViewStyle())
     .onAppear { viewModel.getMovies("pirate") }
+    .alert(isPresented: $viewModel.showAlert) {
+      viewModel.alertManager.populateAlert()
+    }
   }
 }
 
