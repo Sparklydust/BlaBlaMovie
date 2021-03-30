@@ -25,6 +25,7 @@ final class MoviesViewModel: ObservableObject {
   //
   @Published var isProgressViewOn = false
   @Published var showAlert = false
+  @Published var wwdc = false
 
   init(alertManager: AlertProtocol = AlertManager(),
        networkingManager: NetworkingManager = NetworkingManager()) {

@@ -12,6 +12,8 @@ import SwiftUI
 ///
 struct WebImageView: View {
 
+  @EnvironmentObject var movies: MoviesViewModel
+
   @StateObject var viewModel: WebImageViewModel
 
   private let image: (UIImage) -> Image
@@ -40,5 +42,6 @@ struct WebImageView: View {
       }
     }
     .onAppear { viewModel.getImage() }
+    .onTapGesture(count: 7) { movies.wwdc = true }
   }
 }

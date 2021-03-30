@@ -37,6 +37,9 @@ extension WebImageViewModel {
   func getImage() {
     guard let url = url else { return }
 
-
+    networkingManager
+      .getImage(atURL: url)
+      .receive(on: DispatchQueue.main)
+      .assign(to: &$image)
   }
 }

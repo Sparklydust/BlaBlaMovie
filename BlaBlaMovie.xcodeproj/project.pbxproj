@@ -49,6 +49,7 @@
 		2A8DA0F92613B6BB001F395B /* CacheConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0F82613B6BB001F395B /* CacheConfiguration.swift */; };
 		2A8DA0FF2613B773001F395B /* NSLockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0FE2613B773001F395B /* NSLockProtocol.swift */; };
 		2A8DA1032613B7AD001F395B /* UIImage+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA1022613B7AD001F395B /* UIImage+Decode.swift */; };
+		2A8DA1092613BE1A001F395B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8DA1082613BE1A001F395B /* Images.xcassets */; };
 		2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */; };
 		2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71AC1261243B90006F6FD /* ContentView.swift */; };
 		2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC3261243BB0006F6FD /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		2A8DA0F82613B6BB001F395B /* CacheConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConfiguration.swift; sourceTree = "<group>"; };
 		2A8DA0FE2613B773001F395B /* NSLockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLockProtocol.swift; sourceTree = "<group>"; };
 		2A8DA1022613B7AD001F395B /* UIImage+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decode.swift"; sourceTree = "<group>"; };
+		2A8DA1082613BE1A001F395B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlaBlaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieApp.swift; sourceTree = "<group>"; };
 		2AD71AC1261243B90006F6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD71AC3261243BB0006F6FD /* Assets.xcassets */,
+				2A8DA1082613BE1A001F395B /* Images.xcassets */,
 				2AD71AC6261243BB0006F6FD /* Preview Assets.xcassets */,
 			);
 			path = Assets;
@@ -653,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8DA016261278BF001F395B /* Keys.plist in Resources */,
+				2A8DA1092613BE1A001F395B /* Images.xcassets in Resources */,
 				2A8DA05E26134878001F395B /* Localizable.strings in Resources */,
 				2AD71AC7261243BB0006F6FD /* Preview Assets.xcassets in Resources */,
 				2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */,

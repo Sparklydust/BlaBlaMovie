@@ -12,6 +12,8 @@ import SwiftUI
 ///
 struct MovieCell: View {
 
+  @EnvironmentObject var viewModel: MoviesViewModel
+
   @State var isSelected = false
 
   var movie: SearchResultData
