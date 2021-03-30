@@ -2,6 +2,9 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Global/macOS.gitignore & Swift.gitignore
 
+## BlaBlaMovie settings
+/Keys.plist
+
 ## User settings
 xcuserdata/
 

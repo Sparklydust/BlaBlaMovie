@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+//  MARK: BlaBlaMovieApp
+/// SwiftUI entry point at application launch.
+///
 @main
 struct BlaBlaMovieApp: App {
 
