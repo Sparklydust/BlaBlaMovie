@@ -8,6 +8,10 @@
 import Combine
 import Foundation
 
+//  MARK: MoviesViewModel
+/// Handle SearchMoviesView as Parent and some of its
+/// children views.
+///
 final class MoviesViewModel: ObservableObject {
 
   var subscriptions = Set<AnyCancellable>()
@@ -15,6 +19,7 @@ final class MoviesViewModel: ObservableObject {
   // MARK: Data
   //
   @Published var moviesData = [SearchResultData]()
+  @Published var selectedMovie: SearchResultData?
 
   // MARK: Services
   //
@@ -25,7 +30,6 @@ final class MoviesViewModel: ObservableObject {
   //
   @Published var isProgressViewOn = false
   @Published var showAlert = false
-  @Published var wwdc = false
 
   init(alertManager: AlertProtocol = AlertManager(),
        networkingManager: NetworkingManager = NetworkingManager()) {

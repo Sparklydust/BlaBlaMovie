@@ -17,11 +17,16 @@ struct MovieCell: View {
   @State var isSelected = false
 
   var movie: SearchResultData
+  var namespace: Namespace.ID
 
   var body: some View {
     HStack(spacing: 16) {
       WebImageView(url: URL(string: movie.poster),
                    image: { Image(uiImage: $0) })
+        .onTapGesture(count: 7) { viewModel.selectedMovie = movie }
+        .matchedGeometryEffect(id: "\(movie.imdbID)image", in: namespace)
+        .frame(width: 44, height: 66)
+        .environmentObject(viewModel)
 
       VStack(alignment: .leading, spacing: 4) {
         Text(movie.title)
@@ -46,27 +51,34 @@ struct MovieCell: View {
         }}
     }
     .padding(.vertical, 8)
+    .zIndex(.zero)
   }
 }
 
 // MARK: - Previews
-struct MovieCell_Previews: PreviewProvider {
+struct MovieCell_Preview: PreviewProvider {
+
+  struct MovieCellFake: View {
+
+    @Namespace var namespace
+
+    var body: some View {
+      MovieCell(
+        movie: SearchResultData(
+          title: "Godzilla",
+          year: "2018",
+          imdbID: "1234",
+          type: .movie,
+          poster: "http://fake.com"),
+        namespace: namespace)
+    }
+  }
 
   static var previews: some View {
     Group {
-      MovieCell(movie: SearchResultData(
-                  title: "Godzilla",
-                  year: "2021",
-                  imdbID: "1234",
-                  type: .movie,
-                  poster: "http://fake.com"))
+      MovieCellFake()
 
-      MovieCell(movie: SearchResultData(
-                  title: "Godzilla",
-                  year: "2021",
-                  imdbID: "1234",
-                  type: .movie,
-                  poster: "http://fake.com"))
+      MovieCellFake()
         .preferredColorScheme(.dark)
     }
   }

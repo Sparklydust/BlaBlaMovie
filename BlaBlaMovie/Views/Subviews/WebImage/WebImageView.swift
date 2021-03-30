@@ -12,8 +12,6 @@ import SwiftUI
 ///
 struct WebImageView: View {
 
-  @EnvironmentObject var movies: MoviesViewModel
-
   @StateObject var viewModel: WebImageViewModel
 
   private let image: (UIImage) -> Image
@@ -29,9 +27,9 @@ struct WebImageView: View {
       if viewModel.image != nil {
         image(viewModel.image!)
           .resizable()
-          .frame(width: 44, height: 66)
           .scaledToFit()
-          .cornerRadius(2)
+          .frame(width: 44, height: 66)
+          .cornerRadius(8)
       }
       else {
         Image(systemName: "photo")
@@ -42,6 +40,5 @@ struct WebImageView: View {
       }
     }
     .onAppear { viewModel.getImage() }
-    .onTapGesture(count: 7) { movies.wwdc = true }
   }
 }

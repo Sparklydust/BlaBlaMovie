@@ -13,6 +13,8 @@ import SwiftUI
 ///
 struct SearchMoviesView: View {
 
+  @Namespace var namespace
+
   @ObservedObject var viewModel = MoviesViewModel()
 
   @StateObject var searchBarItem = SearchBarItem()
@@ -20,11 +22,23 @@ struct SearchMoviesView: View {
   var body: some View {
     ZStack {
       NavigationView {
-        VStack {
-          List(viewModel.moviesData, id: \.imdbID) {
-            MovieCell(movie: $0)
+        ScrollView {
+          VStack {
+            ForEach(viewModel.moviesData, id: \.imdbID) { movie in
+              if movie.imdbID != viewModel.selectedMovie?.imdbID {
+                MovieCell(movie: movie,
+                          namespace: namespace)
+                  .environmentObject(viewModel)
+                  .animation(.easeInOut(duration: 0.35))
+                  .zIndex(1)
+              }
+              else {
+                BlankMovieCell()
+              }
+            }
           }
         }
+        .padding(.horizontal)
         .add(searchBarItem)
         .navigationTitle(Localized.moviesTabItem)
       }
@@ -33,7 +47,14 @@ struct SearchMoviesView: View {
         ProgressView()
           .modifier(MainProgressViewModifier())
       }
+
+      if let movieInfo = viewModel.selectedMovie {
+        TheMovieView(movie: $viewModel.selectedMovie,
+                     movieInfo: movieInfo,
+                     namespace: namespace)
+      }
     }
+    .zIndex(-1)
     .navigationViewStyle(StackNavigationViewStyle())
     .onAppear { viewModel.getMovies("pirate") }
     .alert(isPresented: $viewModel.showAlert) {
