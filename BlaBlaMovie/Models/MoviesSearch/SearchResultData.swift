@@ -1,5 +1,5 @@
 //
-//  SearchResultModel.swift
+//  SearchResultData.swift
 //  BlaBlaMovie
 //
 //  Created by Roland Lariotte on 30/03/2021.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-//  MARK: SearchResultModel
+//  MARK: SearchResultData
 /// Deep data from the search NetworkingManager request
 /// with MoviesSearchData as the main actor.
 ///
-class SearchResultModel: ObservableObject, Codable {
+class SearchResultData: ObservableObject, Codable {
 
   @Published var title: String
   @Published var year: String

@@ -14,7 +14,7 @@ final class MoviesViewModel: ObservableObject {
 
   // MARK: Data
   //
-  @Published var moviesData = [SearchResultModel]()
+  @Published var moviesData = [SearchResultData]()
 
   // MARK: Services
   //
@@ -62,7 +62,7 @@ extension MoviesViewModel {
   ///
   /// - Parameter data: Searched movies from the api.
   ///
-  func handleSearchMovies(_ data: [SearchResultModel]) {
+  func handleSearchMovies(_ data: [SearchResultData]) {
     moviesData.removeAll()
     moviesData.append(contentsOf: data)
   }

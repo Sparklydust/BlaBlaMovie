@@ -14,15 +14,12 @@ struct MovieCell: View {
 
   @State var isSelected = false
 
-  var movie: SearchResultModel
+  var movie: SearchResultData
 
   var body: some View {
     HStack(spacing: 16) {
-      Image(systemName: "photo")
-        .resizable()
-        .scaledToFill()
-        .frame(width: 44, height: 66)
-        .cornerRadius(8)
+      WebImageView(url: URL(string: movie.poster),
+                   image: { Image(uiImage: $0) })
 
       VStack(alignment: .leading, spacing: 4) {
         Text(movie.title)
@@ -55,14 +52,14 @@ struct MovieCell_Previews: PreviewProvider {
 
   static var previews: some View {
     Group {
-      MovieCell(movie: SearchResultModel(
+      MovieCell(movie: SearchResultData(
                   title: "Godzilla",
                   year: "2021",
                   imdbID: "1234",
                   type: .movie,
                   poster: "http://fake.com"))
 
-      MovieCell(movie: SearchResultModel(
+      MovieCell(movie: SearchResultData(
                   title: "Godzilla",
                   year: "2021",
                   imdbID: "1234",

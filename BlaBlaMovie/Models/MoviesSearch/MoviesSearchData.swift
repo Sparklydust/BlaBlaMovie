@@ -13,7 +13,7 @@ import Foundation
 ///
 class MoviesSearchData: ObservableObject, Codable {
 
-  @Published var search: [SearchResultModel]
+  @Published var search: [SearchResultData]
   @Published var totalResults: String
   @Published var response: String
 
@@ -24,7 +24,7 @@ class MoviesSearchData: ObservableObject, Codable {
     case response = "Response"
   }
 
-  init(search: [SearchResultModel],
+  init(search: [SearchResultData],
        totalResults: String,
        response: String) {
     self.search = search
