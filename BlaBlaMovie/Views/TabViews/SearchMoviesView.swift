@@ -13,8 +13,16 @@ import SwiftUI
 ///
 struct SearchMoviesView: View {
 
+  @StateObject var searchBarItem = SearchBarItem()
+
   var body: some View {
-    Text("SearchMoviesView")
+    NavigationView {
+      VStack {
+        Text("SearchMoviesView")
+      }
+      .add(searchBarItem)
+      .navigationTitle(Localized.moviesTabItem)
+    }
   }
 }
 

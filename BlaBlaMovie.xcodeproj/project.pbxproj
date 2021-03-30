@@ -29,6 +29,10 @@
 		2A8DA07926134EDF001F395B /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA07826134EDF001F395B /* WelcomeCell.swift */; };
 		2A8DA07F2613571E001F395B /* SkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA07E2613571E001F395B /* SkipButton.swift */; };
 		2A8DA084261357D0001F395B /* WelcomeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA083261357D0001F395B /* WelcomeTitle.swift */; };
+		2A8DA08D261361BF001F395B /* SearchBarRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA08C261361BF001F395B /* SearchBarRepresentable.swift */; };
+		2A8DA0952613638E001F395B /* SearchBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0942613638E001F395B /* SearchBarModifier.swift */; };
+		2A8DA09D2613640E001F395B /* SearchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA09C2613640E001F395B /* SearchBarItem.swift */; };
+		2A8DA0A3261364C2001F395B /* View+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DA0A2261364C2001F395B /* View+SearchBar.swift */; };
 		2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */; };
 		2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD71AC1261243B90006F6FD /* ContentView.swift */; };
 		2AD71AC4261243BB0006F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD71AC3261243BB0006F6FD /* Assets.xcassets */; };
@@ -72,6 +76,10 @@
 		2A8DA07826134EDF001F395B /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
 		2A8DA07E2613571E001F395B /* SkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButton.swift; sourceTree = "<group>"; };
 		2A8DA083261357D0001F395B /* WelcomeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTitle.swift; sourceTree = "<group>"; };
+		2A8DA08C261361BF001F395B /* SearchBarRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarRepresentable.swift; sourceTree = "<group>"; };
+		2A8DA0942613638E001F395B /* SearchBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarModifier.swift; sourceTree = "<group>"; };
+		2A8DA09C2613640E001F395B /* SearchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarItem.swift; sourceTree = "<group>"; };
+		2A8DA0A2261364C2001F395B /* View+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SearchBar.swift"; sourceTree = "<group>"; };
 		2AD71ABC261243B90006F6FD /* BlaBlaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlaBlaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD71ABF261243B90006F6FD /* BlaBlaMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlaBlaMovieApp.swift; sourceTree = "<group>"; };
 		2AD71AC1261243B90006F6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -239,6 +247,7 @@
 			children = (
 				2A8DA066261349DA001F395B /* Image+Name.swift */,
 				2A8DA03B2613293B001F395B /* Published+Codable.swift */,
+				2A8DA0A2261364C2001F395B /* View+SearchBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,6 +319,30 @@
 			path = Titles;
 			sourceTree = "<group>";
 		};
+		2A8DA08A26136199001F395B /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA08C261361BF001F395B /* SearchBarRepresentable.swift */,
+			);
+			path = UIViewRepresentables;
+			sourceTree = "<group>";
+		};
+		2A8DA0932613636F001F395B /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA0942613638E001F395B /* SearchBarModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		2A8DA09A261363BB001F395B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2A8DA09C2613640E001F395B /* SearchBarItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		2AD71AB3261243B90006F6FD = {
 			isa = PBXGroup;
 			children = (
@@ -368,9 +401,12 @@
 			children = (
 				2A8DA07726134ED3001F395B /* Cells */,
 				2A8DA07126134E50001F395B /* Components */,
+				2A8DA09A261363BB001F395B /* Items */,
+				2A8DA0932613636F001F395B /* Modifiers */,
 				2A8DA04B261343F8001F395B /* Navigations */,
 				2A8DA06A26134B1D001F395B /* Subviews */,
 				2A8DA04E26134484001F395B /* TabViews */,
+				2A8DA08A26136199001F395B /* UIViewRepresentables */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -500,6 +536,8 @@
 				2AD71AC2261243B90006F6FD /* ContentView.swift in Sources */,
 				2A8DA0572613481D001F395B /* Localized.swift in Sources */,
 				2AD71AC0261243B90006F6FD /* BlaBlaMovieApp.swift in Sources */,
+				2A8DA0A3261364C2001F395B /* View+SearchBar.swift in Sources */,
+				2A8DA0952613638E001F395B /* SearchBarModifier.swift in Sources */,
 				2A8DA03426132824001F395B /* MoviesSearchData.swift in Sources */,
 				2A8D9FF52612634B001F395B /* NetworkEndpoint.swift in Sources */,
 				2A8DA07F2613571E001F395B /* SkipButton.swift in Sources */,
@@ -511,9 +549,11 @@
 				2A8DA0502613449D001F395B /* SearchMoviesView.swift in Sources */,
 				2A8DA00626126824001F395B /* BundleManager.swift in Sources */,
 				2A8DA04226132A84001F395B /* MotionPictureType.swift in Sources */,
+				2A8DA08D261361BF001F395B /* SearchBarRepresentable.swift in Sources */,
 				2A8DA03C2613293B001F395B /* Published+Codable.swift in Sources */,
 				2A8DA06C26134B2D001F395B /* WelcomeView.swift in Sources */,
 				2A8DA07426134E64001F395B /* MainButton.swift in Sources */,
+				2A8DA09D2613640E001F395B /* SearchBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
