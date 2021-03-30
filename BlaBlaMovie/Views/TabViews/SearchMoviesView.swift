@@ -18,14 +18,21 @@ struct SearchMoviesView: View {
   @StateObject var searchBarItem = SearchBarItem()
 
   var body: some View {
-    NavigationView {
-      VStack {
-        List(viewModel.moviesData, id: \.imdbID) { movie in
-          Text(movie.title)
+    ZStack {
+      NavigationView {
+        VStack {
+          List(viewModel.moviesData, id: \.imdbID) { movie in
+            Text(movie.title)
+          }
         }
+        .add(searchBarItem)
+        .navigationTitle(Localized.moviesTabItem)
       }
-      .add(searchBarItem)
-      .navigationTitle(Localized.moviesTabItem)
+
+      if viewModel.isProgressViewOn {
+        ProgressView()
+          .modifier(MainProgressViewModifier())
+      }
     }
     .navigationViewStyle(StackNavigationViewStyle())
     .onAppear { viewModel.getMovies("pirate") }

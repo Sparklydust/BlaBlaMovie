@@ -23,6 +23,7 @@ final class MoviesViewModel: ObservableObject {
 
   // MARK: UILevers
   //
+  @Published var isProgressViewOn = false
   @Published var showAlert = false
 
   init(alertManager: AlertProtocol = AlertManager(),
@@ -42,6 +43,8 @@ extension MoviesViewModel {
   ///   network calls and can be used for testing purposes.
   ///
   func getMovies(_ name: String, completionHandler: @escaping (() -> Void) = {}) {
+    showProgressView(true)
+
     networkingManager
       .get(MoviesSearchData.self, atURL: .searchMovies(name))
       .receive(on: DispatchQueue.main)
@@ -68,6 +71,8 @@ extension MoviesViewModel {
   /// - Parameter completion: Network Request completion with error if any.
   ///
   func handleNetworkRequest(_ completion: Subscribers.Completion<Error>) {
+    showProgressView(false)
+
     switch completion {
     case .failure(let error):
       triggerCompletion(error)
@@ -108,5 +113,13 @@ extension MoviesViewModel {
   ///
   func triggerAlert(_ alert: BlaBlaMovieAlert) {
     alertManager.trigger(alert, &showAlert)
+  }
+
+  /// Trigger action to show/hide ProgressView
+  ///
+  /// - Parameter action: true/false show ProgressView.
+  ///
+  func showProgressView(_ action: Bool) {
+    isProgressViewOn = action
   }
 }
