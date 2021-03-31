@@ -18,6 +18,7 @@ final class MoviesViewModel: ObservableObject {
 
   // MARK: Data
   //
+  @Published var movieData: MovieData?
   @Published var moviesData = [SearchResultData]()
   @Published var selectedMovie: SearchResultData?
 
@@ -40,6 +41,35 @@ final class MoviesViewModel: ObservableObject {
 
 // MARK: - Networking
 extension MoviesViewModel {
+  /// Fetch one movie from the api to show its details.
+  ///
+  /// - Parameters:
+  ///   - imdbID: Movie id found in MoviesData.
+  ///   - successHandler: Used to handle actions on success
+  ///   inside the SwiftUI view navigation to avoid an Apple
+  ///   bug when triggering action from the view model. That
+  ///   might be fix in iOS 15.
+  ///   - completionHandler: Use to pass actions at the end of the
+  ///   network calls and can be used for testing purposes.
+  ///
+  func getMovie(_ imdbID: String,
+                successHandler: @escaping (() -> Void) = {},
+                completionHandler: @escaping (() -> Void) = {}) {
+    showProgressView(true)
+
+    networkingManager
+      .get(MovieData.self, atURL: .movie(imdbID))
+      .receive(on: DispatchQueue.main)
+      .sink(
+        receiveCompletion: { [weak self] completion in
+          self?.handleNetworkRequest(completion)
+          completionHandler() },
+        receiveValue: { [weak self] data in
+          self?.movieData = data
+          successHandler() })
+      .store(in: &subscriptions)
+  }
+
   /// Fetch movies of a particular type from the api.
   ///
   /// - Parameters:

@@ -33,7 +33,6 @@ final class MovieData: ObservableObject, Codable {
   @Published var imdbVotes: String
   @Published var imdbID: String
   @Published var type: String
-  @Published var totalSeasons: String
   @Published var response: String
 
   enum CodingKeys: String, CodingKey {
@@ -57,7 +56,6 @@ final class MovieData: ObservableObject, Codable {
     case imdbVotes
     case imdbID
     case type = "Type"
-    case totalSeasons
     case response = "Response"
   }
 
@@ -81,7 +79,6 @@ final class MovieData: ObservableObject, Codable {
        imdbVotes: String,
        imdbID: String,
        type: String,
-       totalSeasons: String,
        response: String) {
     self.title = title
     self.year = year
@@ -103,7 +100,6 @@ final class MovieData: ObservableObject, Codable {
     self.imdbVotes = imdbVotes
     self.imdbID = imdbID
     self.type = type
-    self.totalSeasons = totalSeasons
     self.response = response
   }
 }

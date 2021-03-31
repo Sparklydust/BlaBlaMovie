@@ -22,10 +22,14 @@ struct MovieCell: View {
 
   var body: some View {
     HStack(spacing: 16) {
-      NavigationLink(destination: MovieDetailsView(),
+      NavigationLink(destination: MovieDetailsView()
+                      .environmentObject(viewModel),
                      isActive: $showMovieDetails) {
 
-        Button(action: { showMovieDetails = true }) {
+        Button(action: {
+          viewModel.getMovie(movie.imdbID,
+                             successHandler: { showMovieDetails = true })
+        }) {
           HStack(spacing: 16) {
             WebImageView(url: URL(string: movie.poster),
                          image: { Image(uiImage: $0) })
@@ -48,8 +52,7 @@ struct MovieCell: View {
             }
             .lineLimit(1)
           }
-        }
-      }
+        }}
 
       Spacer()
 

@@ -12,20 +12,9 @@ import SwiftUI
 ///
 struct MovieDetailsView: View {
 
+  @EnvironmentObject var viewModel: MoviesViewModel
+
   var body: some View {
-    Text("MovieDetailsView")
-  }
-}
-
-// MARK: - Preview
-struct MovieDetailsView_Previews: PreviewProvider {
-
-  static var previews: some View {
-    Group {
-      MovieDetailsView()
-
-      MovieDetailsView()
-        .preferredColorScheme(.dark)
-    }
+    Text(viewModel.movieData?.title ?? String())
   }
 }
