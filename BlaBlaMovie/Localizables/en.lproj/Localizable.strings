@@ -12,16 +12,18 @@
 "internalServerErrorAlertMessage" = "There was an issue on our server. Please, try again later.";
 "invalidResponseAlertMessage" = "There was an issue fetching data from the api. Please, try again later.";
 "notFoundAlertMessage" = "Data were not found. Please, try again later or contact us if this error persist.";
+"maxFavoritesMessage" = "You have chosen your three favorite movies for the week. You can always unselect one or more if you changed your mind.";
 "unauthorizedAlertMessage" = "You are not authorized to access these data.";
-"UnknownAlertMessage" = "Check your internet connection as the data could not be loaded.";
+"unknownAlertMessage" = "Check your internet connection as the data could not be loaded.";
 
 // MARK: - Alert Title
 //
 "internalServerErrorAlertTitle" = "Internal Server Error";
 "invalidResponseAlertTitle" = "Invalid Response";
+"maxFavoritesTitle" = "Limit Reached";
 "notFoundAlertTitle" = "Not Found";
 "unauthorizedAlertTitle" = "Unauthorized";
-"UnknownAlertTitle" = "Error";
+"unknownAlertTitle" = "Error";
 
 // MARK: - Buttons
 //

@@ -11,9 +11,11 @@
 //
 "internalServerErrorAlertMessage" = "Il y a eu un problème sur nos serveurs. Merci de réessayer plus tard.";
 "invalidResponseAlertMessage" = "Il y a eu un problème sur les données à ramener. Merci de réessayer plus tard.";
+"maxFavoritesTitle" = "Limite Atteinte";
+"maxFavoritesMessage" = "Vous avez atteint la limite des trois films cette semaine. Vous pouvez toujours choisir de nouveaux films par désélectionnant vos choix précédent.";
 "notFoundAlertMessage" = "Les données n'ont pas été trouvée. Merci de réessayer plus tard ou de cous contacter si cette erreur persiste.";
 "unauthorizedAlertMessage" = "Vous n'êtes pas autorisé à accéder ces données.";
-"UnknownAlertMessage" = "Merci de vérifier votre connection à internet car nous n'avons pu récupérer les données.";
+"unknownAlertMessage" = "Merci de vérifier votre connection à internet car nous n'avons pu récupérer les données.";
 
 // MARK: - Alert Title
 //
@@ -21,7 +23,7 @@
 "invalidResponseAlertTitle" = "Données perdu";
 "notFoundAlertTitle" = "Introuvable";
 "unauthorizedAlertTitle" = "Non Autorisé";
-"UnknownAlertTitle" = "Erreur";
+"unknownAlertTitle" = "Erreur";
 
 // MARK: - Buttons
 //

@@ -53,7 +53,6 @@ struct MovieCell: View {
             .lineLimit(1)
           }
         }}
-
       Spacer()
 
       Image(systemName: isSelected ? "star.fill" : "star")
@@ -62,7 +61,9 @@ struct MovieCell: View {
         .scaledToFit()
         .foregroundColor(.yellow)
         .onTapGesture { withAnimation(.easeInOut) {
-          isSelected.toggle()
+          viewModel.selectFavoriteMovie(id: movie.imdbID) {
+            isSelected.toggle()
+          }
         }}
 
       Image(systemName: "chevron.right")
@@ -70,6 +71,14 @@ struct MovieCell: View {
     }
     .padding(.vertical, 8)
     .zIndex(.zero)
+    .onAppear {
+      if viewModel.favoritedMoviesID.contains(movie.imdbID) {
+        isSelected = true
+      }
+      else {
+        isSelected = false
+      }
+    }
   }
 }
 

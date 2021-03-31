@@ -15,6 +15,7 @@ enum BlaBlaMovieAlert {
   case unauthorized
   case internalServerError
   case invalidResponse
+  case maxFavoritesReached
   case notFound
   case unknown
 }

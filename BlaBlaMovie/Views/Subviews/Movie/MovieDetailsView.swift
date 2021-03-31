@@ -64,8 +64,18 @@ struct MovieDetailsView: View {
           .scaledToFit()
           .foregroundColor(.yellow)
           .onTapGesture { withAnimation(.easeInOut) {
-            isSelected.toggle()
+            viewModel.selectFavoriteMovie(id: viewModel.movieData?.imdbID ?? String()) {
+              isSelected.toggle()
+            }
           }}
+      }
+    }
+    .onAppear {
+      if viewModel.favoritedMoviesID.contains(viewModel.movieData?.imdbID ?? String()) {
+        isSelected = true
+      }
+      else {
+        isSelected = false
       }
     }
   }

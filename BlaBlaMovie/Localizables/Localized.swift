@@ -23,6 +23,10 @@ enum Localized {
     "invalidResponseAlertMessage",
     comment: "Alert message populated to the user")
 
+  static let maxFavoritesMessage = NSLocalizedString(
+    "maxFavoritesMessage",
+    comment: "Alert message populated to the user when they have reached their movies selections limit.")
+
   static let notFoundAlertMessage = NSLocalizedString(
     "notFoundAlertMessage",
     comment: "Alert message populated to the user")
@@ -31,8 +35,8 @@ enum Localized {
     "unauthorizedAlertMessage",
     comment: "Alert message populated to the user")
 
-  static let UnknownAlertMessage = NSLocalizedString(
-    "UnknownAlertMessage",
+  static let unknownAlertMessage = NSLocalizedString(
+    "unknownAlertMessage",
     comment: "Alert message populated to the user")
 
   // MARK: - Alert Title
@@ -46,6 +50,10 @@ enum Localized {
     "invalidResponseAlertTitle",
     comment: "Alert title populated to the user")
 
+  static let maxFavoritesTitle = NSLocalizedString(
+    "maxFavoritesTitle",
+    comment: "Alert title populated to the user")
+
 
   static let notFoundAlertTitle = NSLocalizedString(
     "notFoundAlertTitle",
@@ -57,7 +65,7 @@ enum Localized {
     comment: "Alert title populated to the user")
 
 
-  static let UnknownAlertTitle = NSLocalizedString(
+  static let unknownAlertTitle = NSLocalizedString(
     "UnknownAlertTitle",
     comment: "Alert title populated to the user")
 

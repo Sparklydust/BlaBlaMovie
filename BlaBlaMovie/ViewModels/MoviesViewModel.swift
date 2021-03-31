@@ -18,6 +18,7 @@ final class MoviesViewModel: ObservableObject {
 
   // MARK: Data
   //
+  @Published var favoritedMoviesID = [String]()
   @Published var movieData: MovieData?
   @Published var moviesData = [SearchResultData]()
   @Published var selectedMovie: SearchResultData?
@@ -29,6 +30,7 @@ final class MoviesViewModel: ObservableObject {
 
   // MARK: UILevers
   //
+  @Published var isMovieSelected = false 
   @Published var isProgressViewOn = false
   @Published var showAlert = false
 
@@ -157,5 +159,29 @@ extension MoviesViewModel {
   ///
   func showProgressView(_ action: Bool) {
     isProgressViewOn = action
+  }
+}
+
+// MARK: - Favorites
+extension MoviesViewModel {
+  /// Selection of the favorited movies.
+  /// - Parameters:
+  ///   - imdbID: Movie id.
+  ///   - completionHandler: Perform actions inside SwiftUI views
+  /// when triggered.
+  ///
+  func selectFavoriteMovie(id imdbID: String,
+                           completionHandler: @escaping (() -> Void)) {
+    if favoritedMoviesID.contains(imdbID) {
+      favoritedMoviesID = favoritedMoviesID.filter { $0 != imdbID }
+      completionHandler()
+    }
+    else if favoritedMoviesID.count >= 3 {
+      triggerAlert(.maxFavoritesReached)
+    }
+    else {
+      completionHandler()
+      favoritedMoviesID.append(imdbID)
+    }
   }
 }

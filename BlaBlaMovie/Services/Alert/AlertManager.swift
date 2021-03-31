@@ -40,6 +40,10 @@ extension AlertManager {
       return populateAlert(
         title: Localized.invalidResponseAlertTitle,
         message: Localized.invalidResponseAlertMessage)
+    case .maxFavoritesReached:
+      return populateAlert(
+        title: Localized.maxFavoritesTitle,
+        message: Localized.maxFavoritesMessage)
     case .notFound:
       return populateAlert(
         title: Localized.notFoundAlertTitle,
@@ -50,8 +54,8 @@ extension AlertManager {
         message: Localized.unauthorizedAlertMessage)
     case .unknown:
       return populateAlert(
-        title: Localized.UnknownAlertTitle,
-        message: Localized.UnknownAlertMessage)
+        title: Localized.unknownAlertTitle,
+        message: Localized.unknownAlertMessage)
     }
   }
 
