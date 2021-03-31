@@ -22,7 +22,7 @@ struct SearchMoviesView: View {
   var body: some View {
     ZStack {
       NavigationView {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
           VStack {
             ForEach(viewModel.moviesData, id: \.imdbID) { movie in
               if movie.imdbID != viewModel.selectedMovie?.imdbID {

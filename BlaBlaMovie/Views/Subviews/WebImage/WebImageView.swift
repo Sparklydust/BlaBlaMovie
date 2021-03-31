@@ -36,6 +36,7 @@ struct WebImageView: View {
           .resizable()
           .scaledToFill()
           .frame(width: 44, height: 66)
+          .foregroundColor(.secondary)
           .cornerRadius(8)
       }
     }
