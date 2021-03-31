@@ -28,14 +28,12 @@ struct WebImageView: View {
         image(viewModel.image!)
           .resizable()
           .scaledToFit()
-          .frame(width: 44, height: 66)
           .cornerRadius(8)
       }
       else {
         Image(systemName: "photo")
           .resizable()
           .scaledToFill()
-          .frame(width: 44, height: 66)
           .foregroundColor(.secondary)
           .cornerRadius(8)
       }
