@@ -24,6 +24,12 @@ struct ContentView: View {
           Text(Localized.moviesTabItem)
           Image.movieTicket
         }
+
+      WinnerMovieView()
+        .tabItem {
+          Text(Localized.winnerTabItem)
+          Image.crown
+        }
     }
     .sheet(isPresented: $showWelcomeView) {
       WelcomeView()

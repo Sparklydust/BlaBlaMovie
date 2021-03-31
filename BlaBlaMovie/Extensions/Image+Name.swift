@@ -19,5 +19,7 @@ extension Image {
 
   static let star = Image(systemName: "star")
 
+  static let crown = Image(systemName: "crown")
+
   static let worldNetwork = Image(systemName: "network")
 }

@@ -37,6 +37,7 @@
 // MARK: - Tab Items
 //
 "moviesTabItem" = "Movies";
+"winnerTabItem" = "Winner";
 
 // MARK: - Titles
 //

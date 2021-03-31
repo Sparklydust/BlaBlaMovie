@@ -90,7 +90,11 @@ enum Localized {
   //
   static let moviesTabItem = NSLocalizedString(
     "moviesTabItem",
-    comment: "movies tab item representing")
+    comment: "movies tab item representation")
+
+  static let winnerTabItem = NSLocalizedString(
+    "winnerTabItem",
+    comment: "winner tab item representation")
 
   // MARK: - Titles
   //
