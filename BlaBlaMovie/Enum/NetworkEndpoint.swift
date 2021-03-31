@@ -26,11 +26,16 @@ enum NetworkEndpoint {
   // MARK: Resources
   //
   case searchMovies(String)
+  case movie(String)
 
   /// BlaBlaMovie api endpoint.
   ///
   var url: URL {
     switch self {
+    case .movie(let imdbID):
+      return NetworkEndpoint
+        .baseURL
+        .flatMap { URL(string: $0.absoluteString + "i=\(imdbID)") }!
     case .searchMovies(let name):
       return NetworkEndpoint
         .baseURL

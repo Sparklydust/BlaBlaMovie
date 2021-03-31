@@ -11,7 +11,7 @@ import Foundation
 /// Deep data from the search NetworkingManager request
 /// with MoviesSearchData as the main actor.
 ///
-class SearchResultData: ObservableObject, Codable {
+final class SearchResultData: ObservableObject, Codable {
 
   @Published var title: String
   @Published var year: String

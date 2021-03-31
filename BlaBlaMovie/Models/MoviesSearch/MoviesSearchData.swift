@@ -11,14 +11,13 @@ import Foundation
 /// Data fetch from api when requesting a searchMovies(String)
 /// request from NetworkingManager.
 ///
-class MoviesSearchData: ObservableObject, Codable {
+final class MoviesSearchData: ObservableObject, Codable {
 
   @Published var search: [SearchResultData]
   @Published var totalResults: String
   @Published var response: String
 
   enum CodingKeys: String, CodingKey {
-    
     case search = "Search"
     case totalResults
     case response = "Response"
