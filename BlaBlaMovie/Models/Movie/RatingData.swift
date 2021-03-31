@@ -10,19 +10,13 @@ import Foundation
 //  MARK: RatingData
 /// Rating values of a movie.
 ///
-final class RatingData: ObservableObject, Codable {
+struct RatingData: Codable {
 
-  @Published var source: String
-  @Published var value: String
+  let source: String
+  let value: String
 
   enum CodingKeys: String, CodingKey {
     case source = "Source"
     case value = "Value"
-  }
-
-  init(source: String,
-       value: String) {
-    self.source = source
-    self.value = value
   }
 }

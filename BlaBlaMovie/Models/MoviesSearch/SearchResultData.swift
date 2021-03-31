@@ -11,13 +11,13 @@ import Foundation
 /// Deep data from the search NetworkingManager request
 /// with MoviesSearchData as the main actor.
 ///
-final class SearchResultData: ObservableObject, Codable {
+struct SearchResultData: Codable {
 
-  @Published var title: String
-  @Published var year: String
-  @Published var imdbID: String
-  @Published var type: MotionPictureType
-  @Published var poster: String
+  let title: String
+  let year: String
+  let imdbID: String
+  let type: MotionPictureType
+  let poster: String
 
   enum CodingKeys: String, CodingKey {
     case title = "Title"
@@ -25,17 +25,5 @@ final class SearchResultData: ObservableObject, Codable {
     case imdbID
     case type = "Type"
     case poster = "Poster"
-  }
-
-  init(title: String,
-       year: String,
-       imdbID: String,
-       type: MotionPictureType,
-       poster: String) {
-    self.title = title
-    self.year = year
-    self.imdbID = imdbID
-    self.type = type
-    self.poster = poster
   }
 }
