@@ -15,11 +15,14 @@ struct ContentView: View {
   @AppStorage("showWelcomeView")
   var showWelcomeViewStorage = true
 
+  @ObservedObject var viewModel = MoviesViewModel()
+
   @State var showWelcomeView = false
 
   var body: some View {
     TabView {
       SearchMoviesView()
+        .environmentObject(viewModel)
         .tabItem {
           Text(Localized.moviesTabItem)
           Image.movieTicket
@@ -35,6 +38,7 @@ struct ContentView: View {
       WelcomeView()
     }
     .onAppear {
+      viewModel.getMovies("pirate")
       showWelcomeView = showWelcomeViewStorage
     }
   }

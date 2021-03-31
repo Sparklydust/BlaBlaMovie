@@ -15,7 +15,7 @@ struct SearchMoviesView: View {
 
   @Namespace var namespace
 
-  @ObservedObject var viewModel = MoviesViewModel()
+  @EnvironmentObject var viewModel: MoviesViewModel
 
   @StateObject var searchBarItem = SearchBarItem()
 
@@ -56,7 +56,6 @@ struct SearchMoviesView: View {
     }
     .zIndex(-1)
     .navigationViewStyle(StackNavigationViewStyle())
-    .onAppear { viewModel.getMovies("pirate") }
     .alert(isPresented: $viewModel.showAlert) {
       viewModel.alertManager.populateAlert()
     }

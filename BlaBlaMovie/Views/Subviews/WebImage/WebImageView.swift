@@ -31,11 +31,7 @@ struct WebImageView: View {
           .cornerRadius(8)
       }
       else {
-        Image(systemName: "photo")
-          .resizable()
-          .scaledToFill()
-          .foregroundColor(.secondary)
-          .cornerRadius(8)
+        EmptyView()
       }
     }
     .onAppear { viewModel.getImage() }
